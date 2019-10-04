@@ -1,0 +1,43 @@
+body {
+    background-color: blue;
+  }
+
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+table {
+  border-collapse: collapse;
+  font-weight: normal;
+}
+
+th {
+  border: 1px solid gray;
+}
+td {
+  border: 1px solid gray;
+}
+
+footer {
+   position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+
+a.black_link{
+  background-color:black;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+}

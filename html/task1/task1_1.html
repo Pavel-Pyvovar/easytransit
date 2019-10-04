@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {background-color: powderblue;}
+            h1   {color: green;}
+            p    {color: red;}
+        </style>
+    </head>
+    <body contextmenu="new-context-menu" style="background-color: powderblue">
+        <main>
+            <h1 style="font-size: large; text-align: center">This is lab1</h1>
+            <hr>
+            <section>
+                <header style="color: rebeccapurple">Here header and article tag are wrapped with section tag</header>
+                <article>Here article tag is used</article>
+            </section>
+
+            <audio controls>
+                <source src="../../audio/river_flows_in_you.mp3" type="audio/mp3"></source>
+            </audio>
+            <p>The audio tag is used above</p>
+            <p>The bdi tag can be useful when dealing with <bdi>عربى</bdi></p>
+            <canvas id="canv" width="200" height="100"></canvas>
+            <script>
+                var canvas = document.getElementById("canv");
+                var ctx = canvas.getContext("2d");
+                ctx.moveTo(0, 0);
+                ctx.lineTo(200, 100);
+                ctx.stroke();
+            </script>
+            <br>
+            <p>The datalist tag is used below</p>
+            <input list="countries">
+            <datalist id="countries">
+                <option value="Ukraine">
+                <option value="USA">
+                <option value="China">
+            </datalist>
+            <details>
+                <summary>The tag defines a visible heading for the element. The heading can be clicked to view/hide the details.</summary>
+                <p>The details tag is used here</p>
+            </details>
+            <dialog open>This window is created using dialog tag</dialog>
+            <!--The embed tag doesn't really work yet-->
+            <embed src="https://www.youtube.com/embed/idhrY_3-bJs" type="image/webm" width="250" height="250"><embed>
+            <figure>
+                <img src="../../image/cat.jpeg" alt="Quite kitten" style="width:70%">
+                <figcaption>Fig.1 -Adorable cat</figcaption>
+            </figure>
+
+            <menu id="new-context-menu" type="context">
+                    <menuitem>menuitem tag used</menuitem>
+            </menu>
+            <nav>
+                <p>Links to other tasks:</p>
+                <a href="task1_2.html">task 1.2</a>
+                <br>
+                <a href="task1_3.html">task 1.3</a>
+                <br>
+                <a href="task1_4.html">task 1.4</a>
+                <br>
+                <a href="task1_5.html">task 1.5</a>
+                <br>
+            </nav>
+
+            <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+                    <input type="range" id="a" value="50">100
+                    +<input type="number" id="b" value="50">
+                    =<output name="x" for="a b"></output>
+            </form>
+      
+            <picture>
+                <source media="(min-width: 650px)" srcset="../../image/cat.jpeg">
+                <img src="../../image/cat.jpeg" alt="Cat" style="width:auto;">
+            </picture>
+            <br>
+            <p>The meter tag</p>
+            <meter min="100" max="200" value="150">50%</meter>
+            <progress value="22" max="100"></progress>
+                
+        </main>
+    <footer>
+        <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Created by: <mark>Pavlo Pyvovar</mark></p>
+        <p>Contact information: telegram @ppyvovar</p>
+        <p>This is a footer tag</p>
+    </footer>
+    </body>
+</html>
