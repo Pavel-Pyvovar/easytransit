@@ -1,5 +1,38 @@
+/* Selectors */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Impact;
+  text-align: center;
+  color: aliceblue;
+  font-size: xx-large;
+}
+
+p, li {
+  font-family: Verdana;
+  color: aliceblue;
+}
+
+/* Box model */
+
+/* * {
+  margin: 75%;
+  padding: 75;
+  border-block: ;
+  border-block-color: black;
+  width: 300px;
+  border: 15px black;
+  padding: 15%;
+  margin: 20px;
+}
+ */
+
+ /* Pseudoelements demo */
+*::selection {
+  background: black;
+}
+
 body {
-    background-color: blue;
+    background-color: navy;
+    text-align: center;
   }
 
   #myVideo {
@@ -31,13 +64,41 @@ footer {
    color: white;
    text-align: center;
 }
+/* pseudo classes */
 
-a.black_link{
+black_link{
   background-color:black;
   color: white;
   padding: 5px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+}
 
+a {
+  color: darkgray;
+  font-style: oblique;
+}
+
+.black_box{
+  background-color:black;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.link {
+  color: rgb(146, 19, 19);
+  font-style: oblique;
+}
+
+a:hover {
+  color: #FF00FF;
+}
+
+a.visited {
+  color: darkgray;
+  font-style: oblique;
 }
