@@ -6,9 +6,14 @@ h1, h2, h3, h4, h5, h6 {
   font-size: xx-large;
 }
 
-p, li {
+p, li, b, label {
   font-family: Verdana;
+  list-style-type: none;
   color: aliceblue;
+}
+
+div {
+  position: relative;
 }
 
 /* Box model */
@@ -19,6 +24,8 @@ p, li {
   border-block: ;
   border-block-color: black;
   width: 300px;
+            
+        </section>
   border: 15px black;
   padding: 15%;
   margin: 20px;
@@ -32,16 +39,17 @@ p, li {
 
 body {
     background-color: navy;
+    /* background-image: url("../../webiasa19fall/image/background.jpeg"); */
     text-align: center;
   }
 
-  #myVideo {
+  /* #myVideo {
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-  }
+  } */
 
 table {
   border-collapse: collapse;
@@ -55,30 +63,23 @@ td {
   border: 1px solid gray;
 }
 
-footer {
+footer, form {
    position: relative;
-   left: 0;
    bottom: 0;
    width: 100%;
    background-color: black;
    color: white;
    text-align: center;
 }
-/* pseudo classes */
 
-black_link{
-  background-color:black;
-  color: white;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
+/* pseudo classes */
 
 a {
   color: darkgray;
   font-style: oblique;
 }
+
+/* classes */
 
 .black_box{
   background-color:black;
@@ -89,16 +90,52 @@ a {
   display: inline-block;
 }
 
-a.link {
-  color: rgb(146, 19, 19);
-  font-style: oblique;
-}
-
-a:hover {
-  color: #FF00FF;
+.section {
+  height: 100vh;
+  position: relative;
+  margin-top: 15%;
+  margin-bottom: 0%;
 }
 
 a.visited {
   color: darkgray;
   font-style: oblique;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: black;
+  width: auto;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  padding: 1%;
+  /* margin: 1%; */
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  font-size: small;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: gray;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
 }
