@@ -6,10 +6,17 @@ h1, h2, h3, h4, h5, h6 {
   font-size: xx-large;
 }
 
-p, li, b, label {
+p, li, b, label, th, time, article, aside {
   font-family: Verdana;
   list-style-type: none;
   color: aliceblue;
+}
+
+ul#menu li {
+  display:inline;
+  align-content: space-between;
+  align-items: space-between; 
+  /* What's right?! */
 }
 
 div {
