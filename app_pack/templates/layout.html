@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
         <!-- <link rel="action" href="../../js/moovit.js"> -->
         <title>EasyTransit</title>
     </head>
@@ -12,11 +12,22 @@
         <p><a name="top"></a></p>
         <nav class="topnav">
             <ul id="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html" target="_blank">Blog</a></li>
-                <li><a href="contact.html" target="_blank">Contact</a></li>
+                <li><a href="{{url_for('index')}}">Home</a></li>
+                <li><a href="{{url_for('blog')}}" target="_blank">Blog</a></li>
+                <li><a href="{{url_for('contacts')}}" target="_blank">Contacts</a></li>
             </ul>
         </nav>
+
+        {%with messages = get_flashed_messages()%}
+            {%if messages%}
+            <ul>
+                {%for message in messages%}
+                <li>{{message}}</li>
+                {%endfor%}
+            </ul>
+            {%endif%}
+        {%endwith%}
+
         {%block content%}{%endblock%}
         <footer>
             <p>Here is your footer</p>

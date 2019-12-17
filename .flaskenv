@@ -1,1 +1,2 @@
 FLASK_APP=easytransit.py
+FLASK_ENV=development
