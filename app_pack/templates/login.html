@@ -2,53 +2,29 @@
 {%block content%}
     <section class="section">
             <h1>Sign in</h1>
-            <!-- <form action="mailto:jalovanfres@gmail.com" method="POST" enctype="text/plain"> -->
-            <form action="" method="POST" enctype="text/plain">
+            <form action="" method="POST" enctype="text/plain" novalidate>
+                {{form.hidden_tag()}}
                 <div align="center" class="container">
-                    <hr>
-                    <!-- <label for="email"><b>Email</b></label> -->
-                    <!-- <input type="text" placeholder="Enter Email" name="email" required> -->
-                    {{form.hidden_tag()}}
-                    <!-- The form.hidden_tag() template argument generates a hidden field that includes a token that is used to protect the form against CSRF attacks. -->
-                    <p>
-                        {{form.username.label}} <br>
-                        {{form.username(size=32)}} <br>
-                        {%for error in form.username.errors%}
-                            <span style="color: red;">{{error}}</span>
-                        {%endfor%}
-                    </p>
-                    <br>
                     <p>
                         {{form.email.label}} <br>
                         {{form.email(size=32)}} <br>
                         {%for error in form.email.errors%}
                             <span style="color: red;">{{error}}</span>
                         {%endfor%}
-                    </p>
-                    <br>    
-                    <p>
+                    </p><br>
+                        
+                    <!-- <p>
                         {{form.password.label}} <br>
-                        {{form.password(size=32, class='')}} <br>
+                        {{form.password(size=32)}} <br>
                         {%for error in form.password.errors%}
                             <span style="color: red;">{{error}}</span>
                         {%endfor%}
-                        <!-- add class or id to embed css -->
-                    </p>
-                    <!-- <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required> -->
-                    <br>
-                    <!-- <label for="psw-repeat"><b>Repeat Password</b></label>
-                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required> -->
-                    <hr>
+                    </p> -->
+                    <br><hr>
                     <p>{{form.remember_me()}} {{form.remember_me.label}}</p>
                     <p>{{form.submit()}}</p>
                     <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-                    <!-- <button type="submit" class="registerbtn">Register</button> -->
-                </div>
-                
-                <!-- <div class="container signin">
-                    <p>Already have an account? <a href="#">Sign in</a>.</p>
-                </div> -->
+                </div>               
             </form>
     </section>
 {%endblock%}
