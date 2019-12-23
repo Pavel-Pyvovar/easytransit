@@ -2,9 +2,25 @@
 {%block content%}
     <section class="section">
             <h1>Sign in</h1>
-            <form action="" method="POST" enctype="text/plain" novalidate>
+            <form action="/login" method="POST">
                 {{form.hidden_tag()}}
                 <div align="center" class="container">
+                    <p>
+                        {{form.first_name.label}} <br>
+                        {{form.first_name(size=32)}} <br>
+                        {%for error in form.email.errors%}
+                            <span style="color: red;">{{error}}</span>
+                        {%endfor%}
+                    </p><br>
+
+                    <p>
+                        {{form.second_name.label}} <br>
+                        {{form.second_name(size=32)}} <br>
+                        {%for error in form.email.errors%}
+                            <span style="color: red;">{{error}}</span>
+                        {%endfor%}
+                    </p><br>
+
                     <p>
                         {{form.email.label}} <br>
                         {{form.email(size=32)}} <br>
@@ -13,13 +29,13 @@
                         {%endfor%}
                     </p><br>
                         
-                    <!-- <p>
+                    <p>
                         {{form.password.label}} <br>
                         {{form.password(size=32)}} <br>
                         {%for error in form.password.errors%}
                             <span style="color: red;">{{error}}</span>
                         {%endfor%}
-                    </p> -->
+                    </p>
                     <br><hr>
                     <p>{{form.remember_me()}} {{form.remember_me.label}}</p>
                     <p>{{form.submit()}}</p>
