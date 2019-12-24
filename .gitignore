@@ -3,6 +3,6 @@ venv/
 reports/
 labs/
 *.pyc
-*.pdf
 *.vscode
-.idea
+.idea/
+.gitingore

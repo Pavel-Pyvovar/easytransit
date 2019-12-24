@@ -1,0 +1,55 @@
+{%extends "layout.html"%}
+{%block content%}
+    <section class="section">
+            <h1>Sign up</h1>
+            <form action="/sign_up" method="POST">
+                {{form.hidden_tag()}}
+                <div align="center" class="container">
+                    <p>
+                        {{form.first_name.label}} <br>
+                        {{form.first_name(size=32)}} <br>
+                        {%for error in form.email.errors%}
+                            <span style="color: red;">{{error}}</span>
+                        {%endfor%}
+                    </p><br>
+
+                    <p>
+                        {{form.second_name.label}} <br>
+                        {{form.second_name(size=32)}} <br>
+                        {%for error in form.email.errors%}
+                            <span style="color: red;">{{error}}</span>
+                        {%endfor%}
+                    </p><br>
+
+                    <p>
+                        {{form.email.label}} <br>
+                        {{form.email(size=32)}} <br>
+                        {%for error in form.email.errors%}
+                            <span style="color: red;">{{error}}</span>
+                        {%endfor%}
+                    </p><br>
+                        
+                    <p>
+                        {{form.password.label}} <br>
+                        {{form.password(size=32)}} <br>
+                        {%for error in form.password.errors%}
+                            <span style="color: red;">{{error}}</span>
+                        {%endfor%}
+                    </p>
+
+                    <p>
+                        {{form.repeate_password.label}} <br>
+                        {{form.repeate_password(size=32)}} <br>
+                        {%for error in form.repeate_password.errors%}
+                            <span style="color: red;">{{error}}</span>
+                        {%endfor%}
+                    </p>
+
+                    <br><hr>
+                    <p>{{form.remember_me()}} {{form.remember_me.label}}</p>
+                    <p>{{form.submit()}}</p>
+                    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                </div>               
+            </form>
+    </section>
+{%endblock%}

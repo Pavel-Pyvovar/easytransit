@@ -1,54 +1,57 @@
 {%extends "layout.html"%}
 {%block content%}
     <main>
+
+
+
         <section class="section">
             <article>
                 <header>
-                    <h1>We make you trip managment easier</h1>
+                    {% if current_user.is_authenticated %}
+                        <h1>Hi, {{current_user.first_name}}!</h1>
+                    {% else %}
+                        <h1>Your transit made easier</h1>
+                    {% endif %}
                 </header>
                 <ul>
-                    <h2>Our mission:</h2>
-                    <li>Provide <span style="font: oblique;">up-to-date</span> shedule for public transport</li>
-                    <li>Give <span style="font: oblique;">relavant</span> trip suggestions using Moovit widget</li>
+                    <h2>Our mission is to:</h2>
+                    <li>Provide you with <span style="font: oblique;">up-to-date</span> shedule for public transport</li>
+                    <li>Give you <span style="font: oblique;">relavant</span> trip suggestions using Moovit widget</li>
                     <li>Collect your favourite routes in one place</li>
                 </ul>
-                <aside>
-
-                </aside>
             </article>                   
         </section>
 
-        <a href="{{url_for('login')}}">Sign in</a>
         <!-- fix this link with uri_for -->
         <div align="center" class="row">
             <div align="center" class="column">
                 <!-- <figure>
-                    <img src="../image/bus.jpeg" >
+                    <img src="static/image/bus.jpeg" >
                     <figcaption><a href="bus.html" class="black_box">Buses</a></figcaption>
                 </figure> -->
 
                 <a href="bus.html" title="buses  section" target="_blank">
-                    <img src="../image/bus.jpeg">
+                    <img src="static/image/bus.jpeg">
                     <figcaption><p class="black_box">Buses</p></figcaption>
                 </a>
 
                 <a href="trolleybus.html" title="trolleybuses section" target="_blank">
-                    <img src="../image/trolleybus.jpeg">
+                    <img src="static/image/trolleybus.jpeg">
                     <figcaption><p class="black_box">Trolleybuses</p></figcaption>
                 </a>
 
                 <a href="marshrutka.html" title="marshrutkas section" target="_blank">
-                    <img src="../image/marshrutka.jpeg">
+                    <img src="static/image/marshrutka.jpeg">
                     <figcaption><p class="black_box">Marshrutkas</p></figcaption>
                 </a>
 
                 <a href="tram.html" title="trams section" target="_blank">
-                    <img src="../image/tram.jpeg">
+                    <img src="static/image/tram.jpeg">
                     <figcaption><p class="black_box">Trams</p></figcaption>
                 </a>
 
                 <a href="metro.html" title="metro section" target="_blank">
-                    <img src="../image/metro.jpeg">
+                    <img src="static/image/metro.jpeg">
                     <figcaption><p class="black_box">Metro</p></figcaption>
                 </a>
             </div>
@@ -86,7 +89,6 @@
                     <label for="Bad">I am not ready to pay for this</label>
                 </fieldset>
             </form>            
-            <img src="https%3A%2F%2Fak0.picdn.net%2Fshutterstock%2Fvideos%2F28134610%2Fthumb%2F7.jpg&imgrefurl=https%3A%2F%2Fwww.shutterstock.com%2Fvideo%2Fclip-28134610-throbbing-love-heart-beating-animation-black&tbnid=YAbHez1K8J9rqM&vet=12ahUKEwjGn7_oyL_lAhWZBXcKHWqBDxAQMygPegUIARClAg..i&docid=5r3ZE7w2Rc_HVM&w=852&h=480&q=heart&hl=en&ved=2ahUKEwjGn7_oyL_lAhWZBXcKHWqBDxAQMygPegUIARClAg" alt="">
         </section>
         <p><a href="#top">Top</a></p>
     </main>
