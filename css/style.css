@@ -1,43 +1,50 @@
-body {
-    background-color: blue;
-  }
-
-  #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-  }
-
-table {
-  border-collapse: collapse;
-  font-weight: normal;
+html {
+    font-size: 20px;
 }
 
-th {
-  border: 1px solid gray;
+.table {
+    width: 600px;
 }
+
+.table__header {
+  background-color: grey;
+  border: 0;
+}
+
+.table__delete {
+  cursor: pointer;
+  color: blue;
+}
+
+tr {
+  height: 50px;
+}
+
 td {
-  border: 1px solid gray;
-}
-
-footer {
-   position: relative;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: black;
-   color: white;
-   text-align: center;
-}
-
-a.black_link{
-  background-color:black;
-  color: white;
-  padding: 5px 10px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  border-bottom: 2px solid black;
+}
 
+.diagram_block {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 50px 20px;
+  height: 300px;
+}
+
+.diagram {
+  width: 50px;
+  margin: 0 20px;
+}
+
+.diagram__column {
+  border: 1px solid black;
+
+}.diagram__alt {
+  display: block;
+  visibility: hidden;
+  top: 5px;
+  right: -5px;
+  background-color: gray;
 }
